@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import todo from './models/todo'
+import TodoList from './components/TodoList'
+const state = {//state is established with key:value pair
+  todo
+  // can have multiple models in state separated by comma
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TodoList allTodos = {state.todo}/>
     </div>
   );
 }
